@@ -17,3 +17,29 @@ http://localhost:4004/catalog/Orders?$expand=address
 
 ### Orders with Addresses and book titles
 http://localhost:4004/catalog/Orders?$select=quantity,businessPartner,addressID&$expand=address,book($select=title)
+
+### Orders with Addresses and book titles - businessPartner and addressID required for filling address
+http://localhost:4004/catalog/Orders?$select=quantity&$expand=address,book($select=title)
+
+### Batch request from Fiori: Orders with Addresses and book titles
+POST http://localhost:4004/catalog/$batch
+Accept-Language: en
+OData-MaxVersion: 4.0
+Content-Type: multipart/mixed; boundary=batch_id-1589700022356-50
+Accept: multipart/mixed
+MIME-Version: 1.0
+
+--batch_id-1589700022356-50
+Content-Type:application/http
+Content-Transfer-Encoding:binary
+
+GET Orders?$count=true&$select=ID,addressID,businessPartner,quantity&$expand=address($select=addressId,businessPartner,cityName),book($select=ID,title)&$skip=0&$top=30 HTTP/1.1
+Accept:application/json;odata.metadata=minimal;IEEE754Compatible=true
+Accept-Language:en
+X-CSRF-Token:
+Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true
+
+
+--batch_id-1589700022356-50--
+
+
