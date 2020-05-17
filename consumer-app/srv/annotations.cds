@@ -21,3 +21,48 @@ annotate CatalogService.Orders with @(
 	}
 
 );
+
+annotate CatalogService.Books with {
+	title @title:'Title'
+}
+
+
+annotate CatalogService.Books with @(
+
+	UI: {
+		SelectionFields: [ title ],
+		LineItem: [
+			{ Value: stock, Label: 'Stock' },
+			{ Value: title, Label: 'Book Title' },
+			{ Value: author.name, Label: 'Author' }
+		],
+		HeaderInfo: {
+			TypeName: 'Book',
+			TypeNamePlural: 'Books',
+			Description: { Value: title }
+		}      
+	}
+
+);
+
+annotate CatalogService.Authors with {
+	name @title:'Name'
+}
+
+
+annotate CatalogService.Authors with @(
+
+	UI: {
+		SelectionFields: [ name ],
+		LineItem: [
+			{ Value: ID, Label: 'ID' },
+			{ Value: name, Label: 'Name' }
+		],
+		HeaderInfo: {
+			TypeName: 'Author',
+			TypeNamePlural: 'Authors',
+			Description: { Value: name }
+		}      
+	}
+
+);
