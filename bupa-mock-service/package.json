@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "@sap/cds": "latest",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.4.30",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@sap/cloud-sdk-vdm-business-partner-service": "^1.18.0",
     "sqlite3": "^4.0.9"
   }
 }

@@ -1,2 +1,5 @@
 ### OData V4 entity set returned, containing 4 entities
 http://localhost:3000/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_BusinessPartnerAddress
+
+### OData V2 entity set returned, containing 4 entities
+http://localhost:3000/v2/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_BusinessPartnerAddress
