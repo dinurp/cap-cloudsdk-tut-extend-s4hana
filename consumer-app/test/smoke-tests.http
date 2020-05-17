@@ -1,0 +1,12 @@
+### The book orders: 
+http://localhost:4004/catalog/Orders?$expand=book
+
+### The authors and their books: 
+http://localhost:4004/catalog/Authors?$expand=books
+
+
+### Books that are low on stock: 
+http://localhost:4004/catalog/Books?$filter=stock%20lt%2050
+
+### Books that are low on stock: 
+http://localhost:4004/catalog/Books?$filter=stock%20lt%2050&$expand=author
