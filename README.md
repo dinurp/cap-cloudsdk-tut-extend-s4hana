@@ -8,3 +8,7 @@ https://developers.sap.com/mission.cap-s4hana-cloud-extension.html
    Step 6: The change in step 5 is needed to avoid errors when refering to the extended fields
 5. Add Service Logic to Consume Remote Address Data
    Start the mock BP service for running this 
+6. Create a Frontend with SAP Fiori Elements and Annotations
+   Unlike stated here the preview will not comeup with empty rows initially
+   addressID is aded to the list, as without it navigation to Address is not possible 
+   with the current implementation. 

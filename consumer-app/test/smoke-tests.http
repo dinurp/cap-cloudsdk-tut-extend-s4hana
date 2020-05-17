@@ -14,3 +14,6 @@ http://localhost:4004/catalog/Books?$filter=stock%20lt%2050&$expand=author
 
 ### Orders with Addresses
 http://localhost:4004/catalog/Orders?$expand=address
+
+### Orders with Addresses and book titles
+http://localhost:4004/catalog/Orders?$select=quantity,businessPartner,addressID&$expand=address,book($select=title)
